@@ -1,43 +1,19 @@
 <!DOCTYPE html>
-<!--    1. h1 -h6  - heading - tiêu đề trang web
-        2. p - paragraph - đoạn văn
-        3. img - image 
-            <img src="nguồn ảnh" alt="ảnh lỗi sẽ hiển thị dòng này" >
-        4. a -  anchor - mỏ neo
-            <a href="link tới trang"> tới trang trong link </a>
-        5. ul, li - unordered list, list
-        6. table
-        7. input
-            <input type="text, checkbox,radiobox"> checkbox chọn nhiều cái, radio chỉ chọn dc 1 cái
-        8. button
-        9. div -->
-
 <html>
     <head>
         <title>F8 - Shop</title>
-        <meta charset="utf-8"> <!-- thẻ này dùng để viết tiếng Việt cho trang web -->
-        
-        <!-- CSS kiểu Internal -->
-        <!-- <style>
-            h1{
-                color: red;
-                font-size: 35px;
-            }
-        </style> -->
-
-         <!-- CSS kiểu External -->
-         <!-- <link rel="stylesheet" href="main.css"> -->
+        <meta charset="utf-8"> 
+         <link rel="stylesheet" href="main.css">
     </head>
 
     <body>
         <div>
-            <!-- CSS kiểu Inline -->
-            <h1 style="color: green; font-size: 16px;">Sử dụng CSS trong HTML</h1>
-            <ol>
-                <li>Internal</li> <!-- viết ngay trong file html  - Trong thẻ Style-->
-                <li>External</li>
-                <li>Inline</li>
-            </ol>
+            <!-- đã là ID thì không được trùng nhau -->
+            <h1 id="first-id">CSS selectors</h1>
+            <!-- class sử dụng cho các thành phàn xó thể xuất hiện nhiều lần để tận dụng CSS, tránh lặp lại mã -->
+            <h1 class="second-heading">ID & Class</h1>
+            <h1  class="second-heading">ID & Class</h1>
+            <h1  class="second-heading">ID & Class</h1>
         </div>
     </body>
 </html>

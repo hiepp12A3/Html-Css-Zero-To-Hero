@@ -1,4 +1,10 @@
-h1{
+/* gọi ID bằng dấu # */
+#first-id{
     color: blue;
     font-size: 35px;
+}
+/*  gọi class bằng dấu chấm .*/
+.second-heading{
+    color: gray;
+    font-size: 25px;
 }
