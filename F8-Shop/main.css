@@ -1,4 +1,8 @@
-/* độ ưu tiên trong css */
+/* Universal selector and inherited */
+/* dùng chung */
+*{
+    color: sienna;
+}
 h1{
-    color: red;
+    color: red !important; /* !important đánh dấu là quan trọng nhất */
 }
