@@ -1,8 +1,9 @@
-/* Universal selector and inherited */
-/* dùng chung */
-*{
-    color: sienna;
+/* biến trong CSS */
+:root{
+    /* đặt biến toàn cục  */
+    --text--color: green;
 }
 h1{
-    color: red !important; /* !important đánh dấu là quan trọng nhất */
+    /* gọi biến vừa tạo */
+    color: var(--text--color);
 }
