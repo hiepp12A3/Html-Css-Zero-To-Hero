@@ -4,16 +4,29 @@
         <title>F8 - Shop</title>
         <meta charset="utf-8"> 
          <link rel="stylesheet" href="main.css">
+
+         <style>
+             /* như này thì sẽ ưu tiên css bên này hơn bên file main.css vì cái này được gọi sau */
+             h1{
+                 color: green;
+             }
+         </style>
     </head>
 
     <body>
         <div>
-            <!-- đã là ID thì không được trùng nhau -->
-            <h1 id="first-id">CSS selectors</h1>
-            <!-- class sử dụng cho các thành phàn xó thể xuất hiện nhiều lần để tận dụng CSS, tránh lặp lại mã -->
-            <h1 class="second-heading">ID & Class</h1>
-            <h1  class="second-heading">ID & Class</h1>
-            <h1  class="second-heading">ID & Class</h1>
+            <!-- bài 13 Độ ưu tiên trong CSS -->
+            <h1>Priotity - Sự ưu tiên</h1>
+            <ol>
+                <li>Internal, Externl?</li>
+                <li>Inline - 1000</li>
+                <li>#id  - 100</li>
+                <li>.class - 10</li>
+                <li>tag - 1</li>
+                <li>Equal specificity?</li>
+                <li>Universal selector and inherited?</li>
+                <li>impoter</li>
+            </ol>
         </div>
     </body>
 </html>
