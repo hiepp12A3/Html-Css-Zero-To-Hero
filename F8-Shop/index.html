@@ -6,7 +6,16 @@
          <link rel="stylesheet" href="main.css">
 
          <style>
-             /* như này thì sẽ ưu tiên css bên này hơn bên file main.css vì cái này được gọi sau */
+             /* điểm cao hơn class nên sẽ thắng */
+             #heading-id{
+                color: violet;
+             }
+
+             /* .chấm gọi class là 10 điểm sẽ hơn tag là 1 điểm */
+            .heading-class{
+                color: yellow;
+            }
+
              h1{
                  color: green;
              }
@@ -16,7 +25,8 @@
     <body>
         <div>
             <!-- bài 13 Độ ưu tiên trong CSS -->
-            <h1>Priotity - Sự ưu tiên</h1>
+            <!-- kiểu inline này sẽ có điểm cao nhất và thắng 2 thẻ class và id kia -->
+            <h1 style="color: tomato;" id="heading-id" class="heading-class">Priotity - Sự ưu tiên</h1>
             <ol>
                 <li>Internal, Externl?</li>
                 <li>Inline - 1000</li>
