@@ -7,3 +7,11 @@ h1{
     /* gọi biến vừa tạo */
     color: var(--text--color);
 }
+h2{
+    /* tạo biến cục bộ */
+    --text--color: purple;
+    color: var(--text--color);
+}
+h3{
+    color: var(--text--color);
+}
