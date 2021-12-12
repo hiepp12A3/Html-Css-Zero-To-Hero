@@ -5,14 +5,14 @@
         <meta charset="utf-8"> 
          <link rel="stylesheet" href="main.css">
          <style>
-             /* CSS FUNtiONS */
+             /* CSS psrudo-classes */
             /* 
-            •	Var()
-            • 	Linear-gradient()
-            •	Rgba()
-            •	Rgb()  - bảng màu
-            •	Calc() - tính toán
-            •	Attr() - thuộc tính
+            •	:root – tham chiếu đến chính phẩn tử gốc của thẻ html
+            •	:hover
+            •	:active
+            •	:first-child
+            •	:last-child
+
             */
 
              html{
@@ -20,34 +20,40 @@
              }
 
             .box{
-                width: calc(120px + 50px);  /* có thể dụng để cộng chừ nhân chưa hoặc %*/
+                width: calc(120px + 50px);
                 height: 50vh; 
-                background-color: rgb(255, 255, 71); /*sử dụng bảng màu RGB*/
+                background-color: rgb(255, 255, 71);
             }
-            h1{
-                font-size: 1em;
+            /* sử dụng hover khi di chuyển chuột vào đối tượng sẽ đổi mầu */
+            h1:hover{
+               color: chartreuse;
             }
-            /* attr */
-            /*  ở đây sử dụng lớp giả */
-            a::after{
-                /* lấy giá trị từ thẻ a ở đây là thẻ href */
-                /* dưới đây là cộng chuỗi */
-                content: " (" attr(href) ") "
+            /* sử dụng active khi bám chuột và giữ  vào đối tượng sẽ mới  mầu */
+            .box:active{
+                background-color: coral;
             }
-            /* ví dụ 2 */
-            .box::after{
-                content: attr(data-title);
+
+            /* lấy thằng đầu tiên là lớp con đầu tiên */
+            li:first-child{
+                color: darkblue;
+            }
+            /* lấy thằng cuối cùng là lớp con cuối cùng */
+            li:last-child{
+                color: red;
             }
          </style>
     </head>
     <body>
-        <div class="box" data-title="dùng để .box::after lấy giá trị"></div>
-
-        <!-- sử dụng  a::after để cộng chuỗi khi thay đổi g.trị ở href thì sau chuỗi cũng thay đổi-->
-        <a href="https://fullstack/edu.vn">Học lập trình)</a>
-
+        <div class="box"></div>
         <div >
-            <h1>CSS units?</h1>
+            <h1>CSS psrudo-classes </h1>
+            <ul>
+                <li>•	:root </li>
+                <li>•	:hover </li>
+                <li>•	:active</li>
+                <li>•	:first-child</li>
+                <li>•	:last-child</li>
+            </ul>
         </div>
     </body>
 </html>
