@@ -7,27 +7,25 @@
          <style>
 
              html{
-                 /* thẻ h1 sử dụng rem sẽ phụ thuộc vào kích thước của thẻ html này */
                 font-size: 50px;
              }
 
             .box{
-                width: 50%;
-                height: 100px;
+                width: 75vw; /* bằng 1% kích thước của trình duyệt - 100vw = 100% kích thước chiều rộng*/
+                height: 50vh; /* bằng 100% chiều cao của trình duyệt*/
                 background-color: red;
             }
             h1{
-                /* sử dụng em là giá trị tương đối phụ thuộc 
-                vào thẻ gần nhất chứa nó */
-                /* ở đây rem bầng 80px  */
                 font-size: 1em;
             }
+            /* vw - width, vh - height */
+            /* viewport */
          </style>
     </head>
     <body>
         <div class="box"></div>
 
-        <div style="font-size: 80px;"><!--  đăkt k.thước cho thẻ này thì em sẽ bằng 80px -->
+        <div >
             <h1>CSS units?</h1>
         </div>
     </body>
