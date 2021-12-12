@@ -5,25 +5,46 @@
         <meta charset="utf-8"> 
          <link rel="stylesheet" href="main.css">
          <style>
+             /* CSS FUNtiONS */
+            /* 
+            •	Var()
+            • 	Linear-gradient()
+            •	Rgba()
+            •	Rgb()  - bảng màu
+            •	Calc() - tính toán
+            •	Attr() - thuộc tính
+            */
 
              html{
                 font-size: 50px;
              }
 
             .box{
-                width: 75vw; /* bằng 1% kích thước của trình duyệt - 100vw = 100% kích thước chiều rộng*/
-                height: 50vh; /* bằng 100% chiều cao của trình duyệt*/
-                background-color: red;
+                width: calc(120px + 50px);  /* có thể dụng để cộng chừ nhân chưa hoặc %*/
+                height: 50vh; 
+                background-color: rgb(255, 255, 71); /*sử dụng bảng màu RGB*/
             }
             h1{
                 font-size: 1em;
             }
-            /* vw - width, vh - height */
-            /* viewport */
+            /* attr */
+            /*  ở đây sử dụng lớp giả */
+            a::after{
+                /* lấy giá trị từ thẻ a ở đây là thẻ href */
+                /* dưới đây là cộng chuỗi */
+                content: " (" attr(href) ") "
+            }
+            /* ví dụ 2 */
+            .box::after{
+                content: attr(data-title);
+            }
          </style>
     </head>
     <body>
-        <div class="box"></div>
+        <div class="box" data-title="dùng để .box::after lấy giá trị"></div>
+
+        <!-- sử dụng  a::after để cộng chuỗi khi thay đổi g.trị ở href thì sau chuỗi cũng thay đổi-->
+        <a href="https://fullstack/edu.vn">Học lập trình)</a>
 
         <div >
             <h1>CSS units?</h1>
