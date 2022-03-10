@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>F8 - Shop</title>
-        <meta charset="utf-8"> 
-         <link rel="stylesheet" href="main.css">
-         <style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin: 0;
+        }
+    
+        .box{
+            /* xet kich thuoc ban cho box */
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background-color: darkorchid;
+            /* them padding */
+            padding: 16px;
+            /* them border */
+            border: 2px solid #333;
 
-             html{
-                font-size: 50px;
-             }
+            /* KHI THEM padding va border thi kich
+             thuoc ban dau se bi thay doi lon hon kich thuoc ban dau*/
 
-            .box{
-                width: calc(120px + 50px);
-                height: 50vh; 
-                background-color: rgb(255, 255, 71);
-            }
-           
-         </style>
-    </head>
-    <body>
-        <div class="box"></div>
-        <div >
-            <h1>CSS psrudo-elements </h1>
-            <ul>
-                <li>::befor </li>
-                <li>::after </li>
-                <li>::first-letter</li>
-                <li>::first-line</li>
-                <li>::selection</li>
-            </ul>
-        </div>
-    </body>
+
+            /* SU dung box-sizing de dua box ve kcih thuoc ban dau*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box-sizing</h1>
+    <div class="box">
+        Đây là nội dung bài viết
+    </div>
+   
+</body>
+<script src="./main.js"></script>
 </html>
