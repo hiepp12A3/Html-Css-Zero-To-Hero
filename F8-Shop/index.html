@@ -10,30 +10,29 @@
             margin: 0;
         }
     
-        .box{
-            /* xet kich thuoc ban cho box */
-            width: 100px;
+        .header{
+            width: 100%;
             height: 100px;
-            color: #fff;
-            background-color: darkorchid;
-            /* them padding */
-            padding: 16px;
-            /* them border */
-            border: 2px solid #333;
-
-            /* KHI THEM padding va border thi kich
-             thuoc ban dau se bi thay doi lon hon kich thuoc ban dau*/
-
-
-            /* SU dung box-sizing de dua box ve kcih thuoc ban dau*/
+            color: white;
+            background-color: #333;
+            padding: 20px;
             box-sizing: border-box;
+            border: 10px dashed red;
+            /* BACKGROUND-CLIP  xac dinh pham vi thiet lap mau nen cua phan tu*/
+            background-clip: content-box;
+            /* cac thuoc tinh cua  background-clip: border-box|padding-box|content-box|initial|inherit
+            border-box : gia tri mac dinh cua bg-clip  (d.tich do mau nen gồm có border.padding.content.)
+            padding-box : (d.tich do mau nen gồm có padding.content.)
+            content-box : (d.tich do mau nen gồm có content.)
+            */
+            
         }
     </style>
 </head>
 <body>
-    <h1>CSS Box-sizing</h1>
-    <div class="box">
-        Đây là nội dung bài viết
+    <h1>CSS Background-clip</h1>
+    <div class="header">
+        Background-clip
     </div>
    
 </body>
