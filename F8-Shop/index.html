@@ -5,15 +5,6 @@
         <meta charset="utf-8"> 
          <link rel="stylesheet" href="main.css">
          <style>
-             /* CSS psrudo-classes */
-            /* 
-            •	:root – tham chiếu đến chính phẩn tử gốc của thẻ html
-            •	:hover
-            •	:active
-            •	:first-child
-            •	:last-child
-
-            */
 
              html{
                 font-size: 50px;
@@ -24,35 +15,19 @@
                 height: 50vh; 
                 background-color: rgb(255, 255, 71);
             }
-            /* sử dụng hover khi di chuyển chuột vào đối tượng sẽ đổi mầu */
-            h1:hover{
-               color: chartreuse;
-            }
-            /* sử dụng active khi bám chuột và giữ  vào đối tượng sẽ mới  mầu */
-            .box:active{
-                background-color: coral;
-            }
-
-            /* lấy thằng đầu tiên là lớp con đầu tiên */
-            li:first-child{
-                color: darkblue;
-            }
-            /* lấy thằng cuối cùng là lớp con cuối cùng */
-            li:last-child{
-                color: red;
-            }
+           
          </style>
     </head>
     <body>
         <div class="box"></div>
         <div >
-            <h1>CSS psrudo-classes </h1>
+            <h1>CSS psrudo-elements </h1>
             <ul>
-                <li>•	:root </li>
-                <li>•	:hover </li>
-                <li>•	:active</li>
-                <li>•	:first-child</li>
-                <li>•	:last-child</li>
+                <li>::befor </li>
+                <li>::after </li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+                <li>::selection</li>
             </ul>
         </div>
     </body>
