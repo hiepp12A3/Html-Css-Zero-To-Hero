@@ -10,40 +10,43 @@
             margin: 0;
         }
         
-        /* the cha cua box-child */
-        .box{
+        .header{
             width: 100%;
-            height: 120px;
-            background-color: #333;
-            /* co chua thuoc tinh position*/
-            position: relative;
+            height: 42px;
+            background: #333;
+            /* fixed  */
+            position: fixed;
+            top: 0;
         }
 
-        .box-child{
-            width: 50px;
-            height: 50px;
-            background-color: #fff;
-            /*  absolute tim the cha gan nhat co chua position*/
-            position: absolute;
-            top: 0;
+        .footer{
+            width: 100%;
+            height: 42px;
+            background: #333;
+            /* fixed  */
+            position: fixed;
             bottom: 0;
-            right: 0;
-            left: 0;
+        }
+
+        ul{
+          height: 2000px;  
+        }
+        h1{
+            margin-top: 90px;
         }
         
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="box-child"></div>
-    </div>
-    <h1>CSS Position: Absolute</h1>
+    <div class="header"></div>
+    <h1>CSS Position: Fixed</h1>
     <ul>
         <li>Relative</li>
         <li>Absolute</li>
         <li>Fixed</li>
         <li>Sticky</li>
     </ul>
+    <div class="footer"></div>
    
 </body>
 <script src="./main.js"></script>
