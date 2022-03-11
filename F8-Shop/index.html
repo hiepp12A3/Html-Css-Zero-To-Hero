@@ -15,17 +15,21 @@
             height: 100vh;
             background-image: url(https://tiengdong.com/wp-content/uploads/www_tiengdong_com-meme-meo-cam-dao.jpg);
             background-repeat: no-repeat;
-            /* background-size: cover, contain*/
+            background-size: 100%;
+            border: 20px dashed #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+            /* background-origin */
+            /* padding-box : mac dinh */
+            /* border-box-box : do mau tu border */
+            /* content-box-box : do mau content thoi */
+            background-origin: content-box;
 
-             /* contain: khong de lai khoang trang*/
-            background-size: cover;
-            /* contain: lay chieu dai nhat cua anh, anh khong bi cat xen.  */  
-            /* background-size: contain; */
         }
     </style>
 </head>
 <body>
-    <h1>background-size:  cover, contain</h1>
+    <h1>background-origin</h1>
     <div class="header">
     </div>
    
