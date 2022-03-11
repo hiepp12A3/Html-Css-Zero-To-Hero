@@ -15,6 +15,25 @@
             height: 120px;
             background: rgb(190, 124, 157);
         }
+
+        /* thay doi css cho ky tu dau tien */
+        h1::first-letter{
+            font-size: 50px;
+            color: violet;
+        }
+        
+        /* thay doi css cho dong dau tien */
+        h1::first-line{
+            font-size: 50px;
+            color: red;
+        }
+
+        /*  */
+        h1::selection{
+            background-color: rgb(20, 73, 187);
+            color: #fff;
+        }
+
         /* ::before de tao box ben trong box */
         .box::before{
             content: "";
@@ -36,7 +55,9 @@
 </head>
 <body>
     <div class="box"></div>
-    <h1>18.	Pseudo elements </h1>
+    <h1>Pseudo elements <br />
+        Day la dong thu 2
+    </h1>
     <ul>
         <li>::before</li>
         <li>::after</li>
