@@ -9,32 +9,40 @@
         html, body{
             margin: 0;
         }
-
-        /* position: relative vi tri tuong doi khong bi phu thuoc vao
-         doi tuong nao*/
-        /* 4 thuoc tinh de duy chuyen : top, right, botton, left */
-        h1{
-            /* vd dung margin cac chu se bi day xuong duoi  */
-            /* margin-top: 20px;    */
-
-            /* position: relative di chuyen minhf phan tu do */
-            /* top, lefy, right, botton de di chuyen vi tri */
+        
+        /* the cha cua box-child */
+        .box{
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            /* co chua thuoc tinh position*/
             position: relative;
-            top: 50px;
-            left: 20px;
         }
-    
+
+        .box-child{
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            /*  absolute tim the cha gan nhat co chua position*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
         
     </style>
 </head>
 <body>
-    <div class="box"></div>
-    <h1>CSS Position: Relative</h1>
+    <div class="box">
+        <div class="box-child"></div>
+    </div>
+    <h1>CSS Position: Absolute</h1>
     <ul>
         <li>Relative</li>
         <li>Absolute</li>
         <li>Fixed</li>
-        <li>Stick</li>
+        <li>Sticky</li>
     </ul>
    
 </body>
