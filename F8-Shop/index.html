@@ -9,48 +9,35 @@
         html, body{
             margin: 0;
         }
+        div{
+            width: 200px;
+            height: 200px;
+            /* the  background-image khong co onerror
+            them mot url vao the background-image la anh thay the, cach nhau bang dau ','*/
+            background-image: 
+            /* anh chinh */
+            url("111https://i.pinimg.com/236x/53/a7/48/53a7489439ea1322bcab2b6f8d7a1bf6.jpg"),
+            /* anh thay the */
+            url("images/default-placeholder-200x200.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
         
-        .header{
-            margin-top: 25px;
-            padding: 0 16px;
-            color: white;
-            background-color: #333;
-
-            /*  */
-            position: sticky;
-            position: -webkit-sticky;
-            top: 0;
-        }
-
-        .footer{
-            width: 100%;
-            height: 42px;
-            background: #333;
-            /* fixed  */
-            position: fixed;
-            bottom: 0;
-        }
-
-        ul{
-          height: 2000px;  
-        }
-        h1{
-            margin-top: 25px;
-        }
         
     </style>
 </head>
 <body>
-    <div class="header">header Sticky</div>
-    <h1>CSS Position: Sticky</h1>
-    <ul>
-        <li>Relative</li>
-        <li>Absolute</li>
-        <li>Fixed</li>
-        <li>Sticky</li>
-    </ul>
-    <div class="footer"></div>
+    <h1 class="header">fallback image</h1>
+    <!--Truong hop 1:  su dung the img co onerror , this goi lai src
+    khi anh chinh bi loi thay the bang anh o onerror -->
+    <!-- <img  onerror="this.src='./images/default-placeholder-200x200.png'" 
+          src="https://i.pinimg.com/236x/53/a7/48/53a7489439ea1322bcab2b6f8d7a1bf6.jpg" 
+          alt="" 
+          srcset=""> -->
+
+    <!-- Truong hop 2: su dung the <div> khong co onerror -->
+        <div></div>
    
 </body>
-<script src="./main.js"></script>
+<script src="./main.css"></script>
 </html>
