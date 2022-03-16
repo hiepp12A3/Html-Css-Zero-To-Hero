@@ -29,26 +29,49 @@ html {
 }
 
 #nav {
-
-}
-
-#nav li {
-    /*   các thẻ li sẽ nằm ngang
-         inline la tren 1 hang, block giu lai tinh chat khoi  */
     display: inline-block;
 }
 
-#nav li a{
+#nav, .subnav {
+    /* bỏ gạch chân của thẻ Ul và li */
+    list-style-type: none;
+}
+
+#nav > li {
+   /*   các thẻ li sẽ nằm ngang
+         inline la tren 1 hang, block giu lai tinh chat khoi  */
+         display: inline-block;
+         cursor: pointer;
+}
+
+#nav li {
+    position: relative;
+}
+
+/* dấu > biểu thị là con trực tiếp */
+#nav > li > a {
     color: #fff;
+    /* viết in hoa */
+    text-transform: uppercase;
+}
+
+#nav li a{
+    
     /* bỏ gạch chân thẻ li */
     text-decoration: none;
     /* căn giữa chữ, kích thước bằng 46px bằng với chiều cao của header */
     line-height: 46px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
 
-#nav li:hover a {
+#nav li:hover .subnav {
+    /* hiển thị  subnav khi hover vào thẻ li*/
+    display: block;
+}
+
+#nav > li:hover > a ,
+#nav .subnav li:hover a{
     color: #000;
     background-color: #ccc;
 }
@@ -57,10 +80,44 @@ html {
     /* display : hiển thị; none: ẩn đi 
         tậm ẩn subnav đi*/
     display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    /* tạo bóng đổ xung quanh subnav */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}  
+
+#header .search-button {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-button:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
 
 }
 
 #slider {
+   
 
 }
 
