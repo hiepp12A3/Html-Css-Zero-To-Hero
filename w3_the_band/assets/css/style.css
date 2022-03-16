@@ -26,6 +26,11 @@ html {
 #header {
     height: 46px;
     background-color: #000;
+    /* thanh cuộn đứng nguyên vị trí khi kéo trang web */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #nav {
@@ -117,7 +122,7 @@ html {
 }
 
 #slider {
-   
+   /* margin-top: 46px; */
 
 }
 
