@@ -1,0 +1,73 @@
+/* Reset CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+1. Vi tri
+2. kich thuoc (width, height)
+3. Mau sac
+4. Kieu dang (kieu chu, hinh tron, vuong, ...)
+
+*/
+
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+
+}
+
+#nav li {
+    /*   các thẻ li sẽ nằm ngang
+         inline la tren 1 hang, block giu lai tinh chat khoi  */
+    display: inline-block;
+}
+
+#nav li a{
+    color: #fff;
+    /* bỏ gạch chân thẻ li */
+    text-decoration: none;
+    /* căn giữa chữ, kích thước bằng 46px bằng với chiều cao của header */
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    /* display : hiển thị; none: ẩn đi 
+        tậm ẩn subnav đi*/
+    display: none;
+
+}
+
+#slider {
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
