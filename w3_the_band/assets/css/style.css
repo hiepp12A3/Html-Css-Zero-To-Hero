@@ -18,6 +18,9 @@ html {
 
 */
 
+.clear {
+    clear: both;
+}
 
 #main {
 
@@ -185,6 +188,27 @@ html {
     /* chỉnh độ cao của 1 dòng tạo k.cách giữ 2 dòng 
         t.anh =1.4, t.Việt =1.6*/
         line-height: 1.4;
+}
+
+#content  .member-list {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
 }
 
 #footer {
