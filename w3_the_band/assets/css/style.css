@@ -149,6 +149,43 @@ html {
 
 }
 
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    /* chữ nghiêng */
+    font-style: italic;
+    /*độ làm mờ chữ từ 0 -1 */
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    /* căn đều hai lề của 1 đoạn văn bản */
+    text-align: justify;
+    /* chỉnh độ cao của 1 dòng tạo k.cách giữ 2 dòng 
+        t.anh =1.4, t.Việt =1.6*/
+        line-height: 1.4;
+}
 
 #footer {
 
