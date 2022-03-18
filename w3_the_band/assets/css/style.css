@@ -27,10 +27,26 @@ html {
     color: #fff !important;
 }
 
+/* margin-top */
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+/* margin-top */
+.mt-16 {
+    margin-top: 16px !important;
+}
+
 /* dòng */
 .row {
     margin-left: -8px;
     margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 /* cột */
@@ -38,6 +54,10 @@ html {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
 }
 
 /* 2 cột */
@@ -49,6 +69,8 @@ html {
 .col-third {
     width: 33.33333%;
 }
+
+
 
 .text-center {
     text-align: center !important;
@@ -324,6 +346,39 @@ html {
     background-color: #ccc;
 }
 
+
+/* Contact from*/
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* css nâng cao, lấy các thẻ có class bắt đầu bằng ti- */
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form  .form-submit-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 17px;
+}
 
 /* Footer section */
 #footer {
