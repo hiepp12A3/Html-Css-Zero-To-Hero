@@ -70,11 +70,32 @@ html {
     width: 33.33333%;
 }
 
-
-
 .text-center {
     text-align: center !important;
 }
+
+/* kéo sang phải */
+.pull-right {
+    float: right !important;
+}
+
+/* form button */
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
 
 /* Main */
 #main {
@@ -213,7 +234,7 @@ html {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -300,7 +321,6 @@ html {
 .places-list {
     font-size: 15px;
     margin-top: 32px;
-    margin-bottom: 48px;
 }
 
 .place-img {
@@ -332,21 +352,6 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-}   
-
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
-}
-
-
 /* Contact from*/
 .contact-content {
     margin-top: 48px;
@@ -373,16 +378,39 @@ html {
     width: 100%;
 }
 
-.contact-form  .form-submit-btn {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 17px;
+.map-section img {
+    width: 100%;
 }
 
 /* Footer section */
 #footer {
+    padding: 64px 16px;
+    text-align: center;
+}
 
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copy-right a:hover,
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+    
+}
+
+#footer .copy-right {
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
 }
 /* Modal */
 .modal {
