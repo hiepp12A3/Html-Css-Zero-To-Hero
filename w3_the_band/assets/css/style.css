@@ -7,7 +7,9 @@
 }
 
 html {
-    /* khi cuộn trang web có hiệu ứng kéo */
+    /* khi cuộn trang web có hiệu ứng kéo 
+    nếu không hoạt động fix theo video này
+    https://www.youtube.com/watch?v=friPrgJb4g4 */
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 
