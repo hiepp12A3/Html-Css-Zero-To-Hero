@@ -108,15 +108,17 @@ html {
 }
 
 #header {
-    height: 46px;
-    background-color: #000;
-    /* thanh cuộn đứng nguyên vị trí khi kéo trang web */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    height: 46px;
+    background-color: #000;
+    /* thanh cuộn đứng nguyên vị trí khi kéo trang web */
     /* giúp header nổi lên trên slider */
     z-index: 1;
+    /* dùng cho giao diện mobile, ẩn menu  */
+    overflow: hidden;
 }
 
 #nav {
@@ -190,7 +192,8 @@ html {
     font-size: 14px;
 }  
 
-#header .search-button {
+#header .search-button,
+#header .mobile-menu-btn {
     float: right;
     padding: 0 21px;
 }
@@ -200,6 +203,15 @@ html {
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;

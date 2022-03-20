@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-musical-note-icon-png-image_1748676.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -39,7 +40,11 @@
                     </div>
                 </div>
             <!-- End: Search button -->
-
+            
+            <!-- btn menu ở giao diện mobile -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
 
         </div>
 
@@ -206,6 +211,9 @@
     </div>
 
     <script>
+
+        //  BEGIN: JS modal ở phần tour dates, dùng để cho nút Buy Tickets 
+
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.modal')
         const modalContrainer = document.querySelector('.js-modal-contrainer')
@@ -236,6 +244,47 @@
         modalContrainer.addEventListener('click',function(even){
             even.stopPropagation()
         })
+        // 
+        //  END: JS modal ở phần tour dates, dùng để cho nút Buy Tickets
+        // 
+
+
+        // 
+        // BEGIN: JS btn menu của header khi ở mobile
+        // 
+
+        // getElementById lấy id = header, không cần ghi dấu # 
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+
+
+        //  clientHeight lấy được chiều cao của thằng header
+        // biến headerHeight = chiều cao của thằng header
+        var headerHeight = header.clientHeight;
+
+        // Đóng/mở mobile menu
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerHeight;
+            if(isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function() {
+                header.style.height = null;
+            }
+        }
+         // 
+        // END: JS btn menu của header khi ở mobile
+        // 
+
     </script>
 </body>
 </html>

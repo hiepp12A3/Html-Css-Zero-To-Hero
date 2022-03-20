@@ -1,0 +1,36 @@
+        /* BREAK POINT : điểm  chuyển đổi  */
+        /* 
+            PC : >= 1024px
+            Table : >= 740px & 1024px
+            Mobile : < 740px
+        */
+        
+        /* Mobile */
+        @media (max-width: 739px) {
+            /* bỏ thuộc tính inline-block ở thẻ li bên style.css
+            chuyển menu về thành 1 cột */
+            #nav > li {
+                display: block;
+             }
+
+             /* ẩn nút tìm kiếm */
+            #header .search-button {
+                display: none;
+            }
+        }
+
+        /* Table */
+        @media (min-width: 740px) and (max-width: 1023px) {
+            
+        }
+
+        /* PC */
+        @media (min-width: 1024px) {
+            
+        }
+
+        
+
+        
+
+        
