@@ -4,10 +4,43 @@
             Table : >= 740px & 1024px
             Mobile : < 740px
         */
-        
+
+
+        /* Table and Mobile */
+        @media (max-width: 1023px) {
+            .btn {
+                padding: 16px 16px;
+            }
+
+            #nav .subnav a {
+                padding: 5px 12px;
+            }
+
+            .contact-form .form-control {
+                padding: 15px;
+            }
+
+            .contact-info {
+               line-height: 2; 
+            }
+
+            .social-list {
+                font-size: 48px;
+            }
+
+            #footer .social-list a {
+                margin: 0 8px;
+            }
+
+            #footer .copy-right a {
+                padding: 12px 0;
+                display: inline-block;
+            }
+        }
+
         /* Mobile */
         @media (max-width: 739px) { 
-            
+
             .s-full-width,
             .s-col-full {
                 width: 100% !important;
@@ -69,7 +102,7 @@
             }
 
             .contact-form {
-                margin-top: 16px;
+                margin-top: 32px;
             }
 
         }
