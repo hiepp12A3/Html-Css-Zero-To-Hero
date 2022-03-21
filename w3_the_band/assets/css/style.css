@@ -42,6 +42,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px !important;
+}
+
 /* dòng */
 .row {
     margin-left: -8px;
@@ -294,7 +298,7 @@ html {
 }
 
 #content  .member-list {
-    margin-top: 42px;
+    margin-top: 32px;
 }
 
 #content .member-name {
