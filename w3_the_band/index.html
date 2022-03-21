@@ -276,9 +276,17 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         for (var i = 0; i < menuItems.length; i++){
             var menuItem = menuItems[i];
-            
-            menuItem.onclick = function() {
-                header.style.height = null;
+
+            menuItem.onclick = function(event) {
+            // nextElementSibling lấy thằng con tiếp theo của menuItem
+                var isParenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');               
+                if(isParenMenu){
+            //    nếu isParenMenu là đúng (ấn vào MORE) thì bỏ qua mặc định của MORE không trở về trang Home nữa
+                    event.preventDefault();
+                }else {
+            // nếu không tồn tại thì không đóng menu
+                    header.style.height = null;
+                }
             }
         }
          // 

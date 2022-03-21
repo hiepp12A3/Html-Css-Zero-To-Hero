@@ -6,17 +6,55 @@
         */
         
         /* Mobile */
-        @media (max-width: 739px) {
+        @media (max-width: 739px) {   
+            
+            #header {
+                overflow: hidden;
+            }
+
+            #header .mobile-menu-btn {
+                display: block;
+            }
+
+             /* ẩn nút tìm kiếm */
+            #header .search-button {
+                display: none;
+            }
+            
+            #nav {
+                display: block;
+            }
+
             /* bỏ thuộc tính inline-block ở thẻ li bên style.css
             chuyển menu về thành 1 cột */
             #nav > li {
                 display: block;
              }
 
-             /* ẩn nút tìm kiếm */
-            #header .search-button {
+             #nav > li a{
+                padding: 1px 24px;
+             }
+             
+            #nav > li:first-child {
+                display: inline-block;
+            }
+
+            /* inherit là giá trị mặc định
+            khi ở mobile thì ẩn menu đi */
+            #nav .subnav {
+                position: inherit;
+                background: #333;
+            }
+
+            #nav .subnav a{
+                color: #fff;
+                padding: 5px 41px;
+            }
+
+            .mobile-menu-btn {
                 display: none;
             }
+
         }
 
         /* Table */

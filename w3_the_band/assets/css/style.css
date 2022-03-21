@@ -117,8 +117,7 @@ html {
     /* thanh cuộn đứng nguyên vị trí khi kéo trang web */
     /* giúp header nổi lên trên slider */
     z-index: 1;
-    /* dùng cho giao diện mobile, ẩn menu  */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #nav {
@@ -191,6 +190,14 @@ html {
 #nav .nav-arrow-down {
     font-size: 14px;
 }  
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+
+}
 
 #header .search-button,
 #header .mobile-menu-btn {
