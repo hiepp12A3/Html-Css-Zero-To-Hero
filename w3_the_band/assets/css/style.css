@@ -234,7 +234,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/w3_the_band/assets/img/slider1.jpg') top center / cover no-repeat;
+    background: url('../img/slider1.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -253,6 +253,8 @@ html {
 
 #slider .text-description {
     font-size: 15px;
+    /* tạo bóng đổ xung quanh chữ */
+    text-shadow: 0 0 1px #000
 
 }
 
