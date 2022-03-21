@@ -7,6 +7,10 @@
         
         /* Mobile */
         @media (max-width: 739px) {   
+
+            .s-col-full {
+                width: 100%;
+            }
             
             #header {
                 overflow: hidden;
@@ -53,6 +57,10 @@
 
             .mobile-menu-btn {
                 display: none;
+            }
+
+            #content .member-img {
+                width: 60%;
             }
 
         }

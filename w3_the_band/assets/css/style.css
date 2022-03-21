@@ -294,7 +294,7 @@ html {
 }
 
 #content  .member-list {
-    margin-top: 48px;
+    margin-top: 42px;
 }
 
 #content .member-name {
@@ -347,7 +347,7 @@ html {
 /* Places */
 .places-list {
     font-size: 15px;
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
