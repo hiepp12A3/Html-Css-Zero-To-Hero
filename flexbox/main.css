@@ -149,11 +149,14 @@ body {
     padding: 32px 0;
     max-width: 640px;
     height: 360px;
+    display: flex;
 }
 
 .center-layout__item {
     font-size: 42px;
     font-weight: 700;
+    /* căn giữa bằng margin */
+    margin: auto;
 }
 
 /* Chart layout */
