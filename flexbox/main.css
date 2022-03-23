@@ -47,12 +47,18 @@ body {
 
 .form__row {
     padding: 8px 0;
+    display: flex;
 }
 
 .form__label {
+    /* thêm độ dài tối thiểu để hai input k.thước bằng nhau */
+    min-width: 90px;
 }
 
 .form__input {
+    /* có 1 item có flex=1 hoặc từ 1 trở lên, thì item đó sẽ 
+    chiếm hết khoảng không gian theo chiều main axis */
+    flex: 1;
 }
 
 /* Column layout */
