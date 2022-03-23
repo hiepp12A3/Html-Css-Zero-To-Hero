@@ -66,6 +66,7 @@ body {
     margin-top: 36px;
     padding: 12px 0;
     background-color: #fff;
+    display:flex;
 }
 
 .column-item {
@@ -73,12 +74,16 @@ body {
 }
 
 .sidebar-one {
+        flex: 1;
 }
 
 .sidebar-two {
+        flex: 1;
 }
 
 .main-column {
+    /* đặt riêng flex: 2; tăng kích thước gấp đôi 2 thằng kia */
+    flex: 2;
 }
 
 /* Feature layout */
