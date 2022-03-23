@@ -123,6 +123,11 @@ body {
     background-color: #fff;
     margin-top: 36px;
     padding: 12px 0 32px 0;
+    display: flex;
+    /* giãn cách các item bằng nhau */
+    justify-content: space-around;
+    /* flex-wrap: wrap-reverse; các item đảo ngược chiều khi màn hình kéo nhỏ lại */
+    flex-wrap: wrap-reverse;
 }
 
 .wrap-layout__item {
