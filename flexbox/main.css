@@ -201,22 +201,37 @@ body {
     padding: 32px 0;
     max-width: 740px;
     min-height: 360px;
+    display: flex;
+    /* đảo ngược chiều */
+    flex-direction: row-reverse;
 }
 
 .the-end__first {
     padding: 4px 16px;
     background-color: #fff;
+    flex:1;
+
 }
 
 .the-end__second {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
 }
 
 .the-end__second-one {
     padding: 4px 16px;
     background-color: rgb(227, 192, 214);
+    /* flex-basis: 50%; */
+    flex: 1;
+
 }
 
 .the-end__second-two {
     padding: 4px 16px;
     background-color: rgb(192, 210, 227);
+    /* flex-basis: 50%; */
+    flex: 1;
+    
 }
