@@ -90,6 +90,8 @@ body {
 .feature-layout {
     margin-top: 36px;
     display: flex;
+    flex-direction: column;
+    /* dãn cách giữa các item đều nhau */
     justify-content: space-around;
 
 }
@@ -97,6 +99,8 @@ body {
 /* PC, Tablet */
 @media (min-width: 740px) {
     .feature-layout {
+    /* mặc định là row */       
+    flex-direction: row;
     }
 }
 
