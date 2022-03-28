@@ -1,0 +1,168 @@
+* {
+    /* padding: 0.5em; */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+
+/* cards */
+
+.cards {
+    /* tạo biến khoảng trống và cột để sau thay đổi 1 chỗ */
+    /* tạo biến cục bộ */
+    --spacing: 30px;
+    --column: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+}
+
+
+/* mobile */
+
+@media (max-width: 767px) {
+    .cards {
+        --spacing: 15px;
+        --column: 1;
+    }
+}
+
+
+/* table */
+
+@media (max-width: 1023px) {
+    .cards {
+        --spacing: 20px;
+        --column: 2;
+    }
+}
+
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(calc(100% / var(--column)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    /* item ảnh không bị co lại khit hay đổi kích thước của cards 
+    luôn nằm ở mức cố định đã đặt*/
+    flex-shrink: 0;
+}
+
+.card-top {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    font-weight: 500;
+    margin-bottom: 25px;
+    /* chữ dài vẫn xuống dòng */
+    word-break: break-all;
+    /* giới hạn số dòng hiển thị */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-width: 200px; */
+    /* height: 56px; */
+}
+
+.card-user {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.card-user-avata {
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    object-fit: cover;
+    /* cố định kích thước không bị co lại khi dùng flexbox */
+    flex-shrink: 0;
+}
+
+.card-user-info {
+    padding-left: 20px;
+    /* chiếm hết khoảng trống còn lại */
+    flex: 1;
+}
+
+.card-user-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.card-user-top ion-icon {
+    color: #20e3b2;
+    margin-left: 5px;
+}
+
+.card-user-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.card-user-game {
+    color: #999;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.card-bottom {
+    padding: 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* đẩy hết khoảng trống phía trên dồn xuống dưới */
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.card-live {
+    margin-right: 20px;
+    color: white;
+    background-color: #FF4500;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.card-live span {
+    margin-left: 10px;
+}
+
+.card-watching {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
