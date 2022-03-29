@@ -9,12 +9,34 @@
     <link rel="stylesheet" href="./style.css">
 
     <style>
-        /* Flex Flow: <direction-value> <wrap-value> */
-        /* cú pháp viết ngắn của <direction-value> <wrap-value> */
+        /* Justify Content: -> alignment along main 
+        */
+        /* flex-start (default) | flex-end | center |
+        space-between | space-around | space-evenly */
         
         .container {
             display: flex;
-            flex-flow: row-reverse wrap;
+            /* flex-wrap: wrap; */
+
+            /*các items nằm phía đầu*/
+            /* justify-content: flex-start; */
+
+            /*các items nằm phía cuối*/
+            /* justify-content: flex-end; */
+
+            /*các items nằm phía giữa*/
+            /* justify-content: center; */
+
+            /* căn đều hai bên; 2 items ở đầu & cuối nằm sát hai bên */
+            /* justify-content: space-between; */
+
+            /* căn đều hai bên; 2 items ở đầu & cuối
+                k.cách bằng 50% k.cách bên trong */
+            /* justify-content: space-around; */
+
+            /* căn đều hai bên; 2 items ở đầu & cuối
+                k.cách bằng k.cách bên trong */
+            justify-content: space-evenly;
         }
     </style>
 </head>
@@ -28,12 +50,12 @@
         <div class="box box-2">2</div>
         <div class="box box-3">3</div>
         <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box box-m">m</div>
         <div class="box box-m">m</div>
         <div class="box box-m">m</div>
         <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
+        <div class="box box-m">m</div> -->
     </div>
 </body>
 
