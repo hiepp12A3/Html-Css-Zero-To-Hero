@@ -9,35 +9,33 @@
     <link rel="stylesheet" href="./style.css">
 
     <style>
-        /* Justify Content: -> alignment along main 
-        */
-        /* flex-start (default) | flex-end | center |
-        space-between | space-around | space-evenly */
-        
-        .container {
-            display: flex;
-            /* flex-wrap: wrap; */
-
-            /*các items nằm phía đầu*/
-            /* justify-content: flex-start; */
-
-            /*các items nằm phía cuối*/
-            /* justify-content: flex-end; */
-
-            /*các items nằm phía giữa*/
-            /* justify-content: center; */
-
-            /* căn đều hai bên; 2 items ở đầu & cuối nằm sát hai bên */
-            /* justify-content: space-between; */
-
-            /* căn đều hai bên; 2 items ở đầu & cuối
-                k.cách bằng 50% k.cách bên trong */
-            /* justify-content: space-around; */
-
-            /* căn đều hai bên; 2 items ở đầu & cuối
-                k.cách bằng k.cách bên trong */
-            justify-content: space-evenly;
-        }
+        /* align-items: -> alignment along cross 
+            căn chỉnh theo trục cross axis*/
+        /* stretch (default) | flex-start | flex-end |
+        center | baseline*/
+.container {
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+    align-items: stretch;  /* chiều cao items dãn = chiều cao của container */
+    align-items: flex-start; /* chia làm 2 dòng phía trên, mỗi dòng chiếm 50% trục cross */
+    align-items: flex-end;   /* chia làm 2 dòng phía dưới, mỗi dòng chiếm 50% trục cross */
+   align-items: center;  /* căn đều trên dưới */
+    align-items: baseline;  /* căn theo chân chữ*/
+}
+.box-1 {
+    font-size: 70px;
+}
+.box-3 {
+    font-size: 70px;
+}
+.box-4 {
+    font-size: 70px;
+}
+.box-9 {
+    font-size: 70px;
+    background-color: #264653;
+}
     </style>
 </head>
 <!-- Link bai:  https://www.youtube.com/watch?v=huali38wdQI-->
@@ -51,11 +49,11 @@
         <div class="box box-3">3</div>
         <div class="box box-4">4</div>
         <div class="box box-5">5</div>
-        <!-- <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
-        <div class="box box-m">m</div>
-        <div class="box box-m">m</div> -->
+        <div class="box box-m">6</div>
+        <div class="box box-m">7</div>
+        <div class="box box-m">8</div>
+        <div class="box box-9">9</div>
+        <div class="box box-m">10</div>
     </div>
 </body>
 
