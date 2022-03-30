@@ -9,21 +9,26 @@
     <link rel="stylesheet" href="./style.css">
 
     <style>
-        /* align-items: -> alignment along cross 
-            căn chỉnh theo trục cross axis*/
-        /* stretch (default) | flex-start | flex-end |
-        center | baseline*/
+        /* Align Content: -> */
+        /* flex-start | flex-end | 
+        flex-between | space-around | space-evenly | center*/
 .container {
     display: flex;
     height: 400px;
+    /* chỉ hoạt động khi có flex-wrap: wrap, wrap-reverse */
     flex-wrap: wrap;
-    align-items: stretch;  /* chiều cao items dãn = chiều cao của container */
-    align-items: flex-start; /* chia làm 2 dòng phía trên, mỗi dòng chiếm 50% trục cross */
-    align-items: flex-end;   /* chia làm 2 dòng phía dưới, mỗi dòng chiếm 50% trục cross */
-   align-items: center;  /* căn đều trên dưới */
-    align-items: baseline;  /* căn theo chân chữ*/
+    
+    /* align-items: flex-start; */
+    align-content: flex-start;
+     /* align-content: flex-end; */
+    
+   /* align-content: space-between; */
+   /* align-content: space-around; */
+ /*  align-content: space-evenly;
+   align-content: center;
+     */
 }
-.box-1 {
+/* .box-1 {
     font-size: 70px;
 }
 .box-3 {
@@ -35,7 +40,7 @@
 .box-9 {
     font-size: 70px;
     background-color: #264653;
-}
+} */
     </style>
 </head>
 <!-- Link bai:  https://www.youtube.com/watch?v=huali38wdQI-->
@@ -52,7 +57,7 @@
         <div class="box box-m">6</div>
         <div class="box box-m">7</div>
         <div class="box box-m">8</div>
-        <div class="box box-9">9</div>
+        <div class="box box-m">9</div>
         <div class="box box-m">10</div>
     </div>
 </body>
