@@ -9,24 +9,21 @@
     <link rel="stylesheet" href="./style.css">
 
     <style>
-        /* Align Content: -> */
-        /* flex-start | flex-end | 
-        flex-between | space-around | space-evenly | center*/
+        /* Flex-basis */
+        /* xét chiều cao khi flex-direction: column;
+           xét chiều rộng khi flex-direction: row; */
+        /* default value -> auto */
 .container {
     display: flex;
-    height: 400px;
-    /* chỉ hoạt động khi có flex-wrap: wrap, wrap-reverse */
-    flex-wrap: wrap;
-    
-    /* align-items: flex-start; */
-    align-content: flex-start;
-     /* align-content: flex-end; */
-    
-   /* align-content: space-between; */
-   /* align-content: space-around; */
- /*  align-content: space-evenly;
-   align-content: center;
-     */
+    flex-direction: column;
+}
+
+.box {
+    box-sizing: border-box;
+    height: 200px;
+    /* ghi đè height và width */
+    /* khi xét flex-direction: row; thì  flex-basis là chiều rộng*/
+    flex-basis: 140px;
 }
 /* .box-1 {
     font-size: 70px;
@@ -54,11 +51,11 @@
         <div class="box box-3">3</div>
         <div class="box box-4">4</div>
         <div class="box box-5">5</div>
-        <div class="box box-m">6</div>
+        <!-- <div class="box box-m">6</div>
         <div class="box box-m">7</div>
         <div class="box box-m">8</div>
         <div class="box box-m">9</div>
-        <div class="box box-m">10</div>
+        <div class="box box-m">10</div> -->
     </div>
 </body>
 
