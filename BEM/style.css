@@ -1,19 +1,70 @@
-.card {
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.card-success .card__btn {
-
+body{
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
 }
 
-.heading {
-
+body > div {
+    margin: auto;
 }
 
-.desc {
-
-}
-
+/* Block */
 .btn {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    /* chiều ngang tối thiểu */
+    min-width: 120px;
+    /* giảm opacity xuống còn 2s */
+    transition: opacity .2s ease;
+}
 
+.btn:hover {
+    opacity: 0.8;
+}
+
+/*TIP: CSS cho những btn ở bên phải (ở cạnh) btn đầu tiên   */
+.btn + .btn{
+    margin-left:16px;
+}
+
+.btn--size-s {
+    padding: 8px 42px;
+}
+
+.btn--size-l {
+    padding: 16px 52px;
+}
+
+.btn--size-xl {
+    padding: 20px 56px;
+}
+
+.btn--success {
+    background-color: #67b72d;   
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+}
+
+.btn-warn {
+    background-color: #df9806;   
+}
+
+.btn-danger {
+    background-color: #c72d0f;   
 }
