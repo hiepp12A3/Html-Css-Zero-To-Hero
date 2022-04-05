@@ -1,1 +1,47 @@
 /* CSS những thành phần cấu hình chung */
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    /* inherit: kế thừa từ thẻ chứa nó */
+    box-sizing: inherit;
+}
+
+html {
+    /* mặc định 100% là 16px */
+    /* 62.5% là hack, vidu lihe-height: 1.6rem = 16px, 1.2= 12px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    /* Poppins, Roboto là tên font chữ; 
+        sans-serif là chủng chữ không có chân   */
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* chuẩn bị cho reponsive */
+
+.grid {
+    /* với màn hình có kích thước > 1200px thì k.thước tối đa chỉ là 1200px */
+    width: 1200px;
+    /* k.thước nhỏ hơn 1200px, giảm k.thước  grid = k.thước màn hình*/
+    max-width: 100%;
+    /* căn giũa khối này khi nằm trong khối khác */
+    margin: 0 auto;
+}
+
+.gird__full-width {
+    width: 100%;
+}
+
+.gird__row {
+    /* nằm cùng trên 1 hàng ngang */
+    display: flex;
+    /* tổng độ dài các thg con vượt quá gird__row bị nhảy xuống hàng */
+    flex-wrap: wrap;
+}
