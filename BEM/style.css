@@ -4,17 +4,19 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
 
-body > div {
+body>div {
     margin: auto;
 }
 
-/* Block */
+
+/* BLOCK */
+
 .btn {
     color: #fff;
     display: inline-block;
@@ -35,9 +37,11 @@ body > div {
     opacity: 0.8;
 }
 
+
 /*TIP: CSS cho những btn ở bên phải (ở cạnh) btn đầu tiên   */
-.btn + .btn{
-    margin-left:16px;
+
+.btn+.btn {
+    margin-left: 16px;
 }
 
 .btn--size-s {
@@ -53,7 +57,7 @@ body > div {
 }
 
 .btn--success {
-    background-color: #67b72d;   
+    background-color: #67b72d;
 }
 
 .btn--disabled {
@@ -62,9 +66,124 @@ body > div {
 }
 
 .btn-warn {
-    background-color: #df9806;   
+    background-color: #df9806;
 }
 
-.btn-danger {
-    background-color: #c72d0f;   
+.btn--danger {
+    background-color: #c72d0f;
+}
+
+
+/* ===== Toast message ===== */
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear .3s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-color: #40d35e;
+}
+
+.toast--success .toast__icon {
+    color: #40d35e;
+}
+
+.toast--info {
+    border-color: #4c8bcb;
+}
+
+.toast--info .toast__icon {
+    color: #4c8bcb;
+}
+
+.toast--warning {
+    border-color: #e7a61d;
+}
+
+.toast--warning .toast__icon {
+    color: #e7a61d;
+}
+
+.toast--error {
+    border-color: #e71d39;
+}
+
+.toast--error .toast__icon {
+    color: #e71d39;
+}
+
+.toast+.toast {
+    margin-top: 24px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    /* khi content ngắn vẫn hiện đầy đủ */
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    cursor: pointer;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.toast__close:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
