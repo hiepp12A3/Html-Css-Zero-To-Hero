@@ -1,1 +1,45 @@
 /* CSS những thành phần riêng */
+
+.header {
+    height: 120px;
+    background-image: linear-gradient(#f6432e, #fe6332);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--separate:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #f97869;
+    height: 14px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
