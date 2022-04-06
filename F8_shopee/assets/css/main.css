@@ -8,6 +8,7 @@
     .header__navbar {
         display: flex;
         justify-content: space-between;
+        padding-top: 5px;
     }
     
     .header__navbar-list {
@@ -17,6 +18,7 @@
     }
     
     .header__navbar-item {
+        position: relative;
         margin: 0 8px;
         position: relative;
         min-height: 26px;
@@ -53,6 +55,10 @@
         font-weight: 400;
     }
     
+    .header__navbar-item--has-qr:hover .header__qr {
+        display: block;
+    }
+    
     .header__navbar-item--separate:after {
         content: "";
         display: block;
@@ -60,7 +66,7 @@
         border-left: 1px solid #f97869;
         height: 14px;
         right: -9px;
-        top: 50%;
+        top: 32%;
         transform: translateY(-50%);
     }
     
@@ -72,4 +78,56 @@
     .header__navbar-title--no-pointer {
         cursor: text;
         color: var(--white-color);
+    }
+    /* Header QR code */
+    
+    .header__qr {
+        position: absolute;
+        left: 0;
+        /* 100% của thẻ chứa nó là thẻ li */
+        top: 87%;
+        width: 186px;
+        background-color: var(--white-color);
+        padding: 8px;
+        border-radius: 2px;
+        /* ẩn đi */
+        display: none;
+        animation: fadeIn ease-in .2s;
+    }
+    
+    .header__qr::before {
+        content: "";
+        width: 100%;
+        left: 0;
+        height: 20px;
+        position: absolute;
+        display: block;
+        top: -11px;
+    }
+    
+    .header__qr-img {
+        width: 100%;
+    }
+    
+    .header__qr-apps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .header__qr-link:nth-child(1) {
+        margin-left: 11px;
+    }
+    
+    .header__qr-link:nth-child(2) {
+        margin-right: 11px;
+    }
+    
+    .header__qr-link:nth-child(3) {
+        margin-top: 2px;
+        margin-left: 11px;
+    }
+    
+    .header__qr-download-img {
+        height: 14px;
     }

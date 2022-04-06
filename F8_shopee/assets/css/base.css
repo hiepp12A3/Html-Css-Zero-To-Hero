@@ -45,3 +45,15 @@ html {
     /* tổng độ dài các thg con vượt quá gird__row bị nhảy xuống hàng */
     flex-wrap: wrap;
 }
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
