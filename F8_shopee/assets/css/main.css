@@ -131,3 +131,87 @@
     .header__qr-download-img {
         height: 14px;
     }
+    /* Header Notification */
+    
+    .header__notify {
+        position: absolute;
+        top: 87%;
+        right: 0;
+        width: 404px;
+        background-color: var(--white-color);
+        border: 1px solid #D3D3D3;
+    }
+    
+    .header__notify-header {
+        height: 40px;
+        background-color: var(--white-color);
+    }
+    
+    .header__notify-header h3 {
+        color: #666;
+        margin: 0 0 0 12px;
+        margin-top: 0;
+        font-weight: 400;
+        font-size: 1.4em;
+        line-height: 40px;
+    }
+    
+    .header__notify-list {
+        padding-left: 0;
+    }
+    
+    .header__notify-item {
+        display: flex;
+    }
+    
+    .header__notify-item:hover {
+        background-color: #f7f7f7;
+    }
+    /* màu tin chưa đọc */
+    
+    .header__notify-item--viewed {
+        background-color: rgba(238, 75, 43, 0.08)
+    }
+    
+    .header__notify-link {
+        display: flex;
+        width: 100%;
+        padding: 12px;
+        text-decoration: none;
+    }
+    
+    .header__notify-img {
+        width: 48px;
+        object-fit: contain;
+    }
+    
+    .header__notify-info {
+        color: #666;
+        margin-left: 12px;
+    }
+    
+    .header__notify-name {
+        display: block;
+        color: var(--black-color);
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+        font-weight: 400;
+    }
+    
+    .header__notify-desc {
+        display: block;
+        font-size: 1.2rem;
+        color: #756F6E;
+        line-height: 1.2rem
+    }
+    
+    .header__notify-footer {
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .header__notify-footer-btn {
+        text-decoration: none;
+        color: var(--text-color);
+    }
