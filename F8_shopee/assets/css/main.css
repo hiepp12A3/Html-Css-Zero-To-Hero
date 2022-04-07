@@ -95,6 +95,10 @@
         animation: fadeIn ease-in .2s;
     }
     
+    .header__navbar-item--has-notify:hover .header__notify {
+        display: block;
+    }
+    
     .header__qr::before {
         content: "";
         width: 100%;
@@ -140,11 +144,28 @@
         width: 404px;
         background-color: var(--white-color);
         border: 1px solid #D3D3D3;
+        /* chọn được cái tâm hiển thị của transfrom */
+        transform-origin: calc(100% - 20px) right;
+        animation: headerNotifyGrowth ease-in 0.25s;
+        display: none;
+    }
+    
+    @keyframes headerNotifyGrowth {
+        from {
+            opacity: 0;
+            /* scale lớn lên từ từ */
+            transform: scale(0)
+        }
+        to {
+            opacity: 1;
+            transform: scale(1)
+        }
     }
     
     .header__notify-header {
         height: 40px;
         background-color: var(--white-color);
+        cursor: default;
     }
     
     .header__notify-header h3 {
@@ -154,6 +175,8 @@
         font-weight: 400;
         font-size: 1.4em;
         line-height: 40px;
+        /* không cho copy text */
+        user-select: none;
     }
     
     .header__notify-list {
@@ -196,22 +219,26 @@
         font-size: 1.4rem;
         margin-bottom: 4px;
         font-weight: 400;
+        line-height: 1.8rem;
+        text-align: justify;
     }
     
     .header__notify-desc {
         display: block;
         font-size: 1.2rem;
+        text-align: justify;
         color: #756F6E;
         line-height: 1.2rem
     }
     
     .header__notify-footer {
-        text-align: center;
-        height: 40px;
-        line-height: 40px;
+        display: flex;
     }
     
     .header__notify-footer-btn {
         text-decoration: none;
         color: var(--text-color);
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
     }
