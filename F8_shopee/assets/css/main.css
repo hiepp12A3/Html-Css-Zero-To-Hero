@@ -1,268 +1,333 @@
-    /* CSS những thành phần riêng */
-    
-    .header {
-        height: 120px;
-        background-image: linear-gradient(#f6432e, #fe6332);
+/* CSS những thành phần riêng */
+
+.header {
+    height: 120px;
+    background-image: linear-gradient(#f6432e, #fe6332);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.header__navbar-item {
+    position: relative;
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__navbar-item--separate:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #f97869;
+    height: 14px;
+    right: -9px;
+    top: 32%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon {
+    font-size: 1.4rem;
+    margin: 0 4px;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+
+/* Header QR code */
+
+.header__qr {
+    position: absolute;
+    left: 0;
+    /* 100% của thẻ chứa nó là thẻ li */
+    top: 87%;
+    width: 186px;
+    background-color: var(--white-color);
+    padding: 8px;
+    border-radius: 2px;
+    /* ẩn đi */
+    display: none;
+    animation: fadeIn ease-in .2s;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
+.header__qr::before {
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 20px;
+    position: absolute;
+    display: block;
+    top: -11px;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__qr-link:nth-child(1) {
+    margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2) {
+    margin-right: 11px;
+}
+
+.header__qr-link:nth-child(3) {
+    margin-top: 2px;
+    margin-left: 11px;
+}
+
+.header__qr-download-img {
+    height: 14px;
+}
+
+
+/* Header Notification */
+
+.header__notify {
+    position: absolute;
+    top: 87%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #D3D3D3;
+    /* chọn được cái tâm hiển thị của transfrom */
+    transform-origin: calc(100% - 20px) right;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    display: none;
+    /* thông báo cho trình duyệt các animation đã thay đổi */
+    will-change: opacity, transform;
+}
+
+
+/* tạo mũi tên */
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    /* transparent là màu trong suốt */
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -14px;
+    width: 90px;
+    height: 20px;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        /* scale lớn lên từ từ */
+        transform: scale(0)
     }
-    
-    .header__navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 5px;
+    to {
+        opacity: 1;
+        transform: scale(1)
     }
-    
-    .header__navbar-list {
-        list-style: none;
-        padding-left: 0;
-        margin-top: 4px;
-    }
-    
-    .header__navbar-item {
-        position: relative;
-        margin: 0 8px;
-        position: relative;
-        min-height: 26px;
-    }
-    
-    .header__navbar-icon-link {
-        color: var(--white-color);
-        text-decoration: none;
-    }
-    
-    .header__navbar-item,
-    .header__navbar-item-link {
-        display: inline-block;
-        font-size: 1.4rem;
-        color: var(--white-color);
-        text-decoration: none;
-        font-weight: 300;
-    }
-    
-    .header__navbar-item,
-    .header__navbar-item-link,
-    .header__navbar-icon-link {
-        display: inline-flex;
-    }
-    
-    .header__navbar-item:hover,
-    .header__navbar-item-link:hover,
-    .header__navbar-icon-link:hover {
-        color: rgba(255, 255, 255, 0.7);
-        cursor: pointer;
-    }
-    
-    .header__navbar-item--strong {
-        font-weight: 400;
-    }
-    
-    .header__navbar-item--has-qr:hover .header__qr {
-        display: block;
-    }
-    
-    .header__navbar-item--separate:after {
-        content: "";
-        display: block;
-        position: absolute;
-        border-left: 1px solid #f97869;
-        height: 14px;
-        right: -9px;
-        top: 32%;
-        transform: translateY(-50%);
-    }
-    
-    .header__navbar-icon {
-        font-size: 1.4rem;
-        margin: 0 4px;
-    }
-    
-    .header__navbar-title--no-pointer {
-        cursor: text;
-        color: var(--white-color);
-    }
-    /* Header QR code */
-    
-    .header__qr {
-        position: absolute;
-        left: 0;
-        /* 100% của thẻ chứa nó là thẻ li */
-        top: 87%;
-        width: 186px;
-        background-color: var(--white-color);
-        padding: 8px;
-        border-radius: 2px;
-        /* ẩn đi */
-        display: none;
-        animation: fadeIn ease-in .2s;
-    }
-    
-    .header__navbar-item--has-notify:hover .header__notify {
-        display: block;
-    }
-    
-    .header__qr::before {
-        content: "";
-        width: 100%;
-        left: 0;
-        height: 20px;
-        position: absolute;
-        display: block;
-        top: -11px;
-    }
-    
-    .header__qr-img {
-        width: 100%;
-    }
-    
-    .header__qr-apps {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    .header__qr-link:nth-child(1) {
-        margin-left: 11px;
-    }
-    
-    .header__qr-link:nth-child(2) {
-        margin-right: 11px;
-    }
-    
-    .header__qr-link:nth-child(3) {
-        margin-top: 2px;
-        margin-left: 11px;
-    }
-    
-    .header__qr-download-img {
-        height: 14px;
-    }
-    /* Header Notification */
-    
-    .header__notify {
-        position: absolute;
-        top: 87%;
-        right: 0;
-        width: 404px;
-        background-color: var(--white-color);
-        border: 1px solid #D3D3D3;
-        /* chọn được cái tâm hiển thị của transfrom */
-        transform-origin: calc(100% - 20px) right;
-        animation: headerNotifyGrowth ease-in 0.25s;
-        display: none;
-        /* thông báo cho trình duyệt các animation đã thay đổi */
-        will-change: opacity, transform;
-    }
-    /* tạo mũi tên */
-    
-    .header__notify::before {
-        content: "";
-        border-width: 20px 26px;
-        border-style: solid;
-        /* transparent là màu trong suốt */
-        border-color: transparent transparent var(--white-color) transparent;
-        right: 0;
-        top: -29px;
-        position: absolute;
-    }
-    
-    .header__notify::after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        top: -14px;
-        width: 90px;
-        height: 20px;
-    }
-    
-    @keyframes headerNotifyGrowth {
-        from {
-            opacity: 0;
-            /* scale lớn lên từ từ */
-            transform: scale(0)
-        }
-        to {
-            opacity: 1;
-            transform: scale(1)
-        }
-    }
-    
-    .header__notify-header {
-        height: 40px;
-        background-color: var(--white-color);
-        cursor: default;
-    }
-    
-    .header__notify-header h3 {
-        color: #666;
-        margin: 0 0 0 12px;
-        margin-top: 0;
-        font-weight: 400;
-        font-size: 1.4em;
-        line-height: 40px;
-        /* không cho copy text */
-        user-select: none;
-    }
-    
-    .header__notify-list {
-        padding-left: 0;
-    }
-    
-    .header__notify-item {
-        display: flex;
-    }
-    
-    .header__notify-item:hover {
-        background-color: #f7f7f7;
-    }
-    /* màu tin chưa đọc */
-    
-    .header__notify-item--viewed {
-        background-color: rgba(238, 75, 43, 0.08)
-    }
-    
-    .header__notify-link {
-        display: flex;
-        width: 100%;
-        padding: 12px;
-        text-decoration: none;
-    }
-    
-    .header__notify-img {
-        width: 48px;
-        object-fit: contain;
-    }
-    
-    .header__notify-info {
-        color: #666;
-        margin-left: 12px;
-    }
-    
-    .header__notify-name {
-        display: block;
-        color: var(--black-color);
-        font-size: 1.4rem;
-        margin-bottom: 4px;
-        font-weight: 400;
-        line-height: 1.8rem;
-        text-align: justify;
-    }
-    
-    .header__notify-desc {
-        display: block;
-        font-size: 1.2rem;
-        text-align: justify;
-        color: #756F6E;
-        line-height: 1.2rem
-    }
-    
-    .header__notify-footer {
-        display: flex;
-    }
-    
-    .header__notify-footer-btn {
-        text-decoration: none;
-        color: var(--text-color);
-        width: 100%;
-        padding: 8px 0;
-        text-align: center;
-    }
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+    cursor: default;
+}
+
+.header__notify-header h3 {
+    color: #666;
+    margin: 0 0 0 12px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 40px;
+    /* không cho copy text */
+    user-select: none;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* màu tin chưa đọc */
+
+.header__notify-item--viewed {
+    background-color: rgba(238, 75, 43, 0.08)
+}
+
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    color: #666;
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    color: var(--black-color);
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    font-weight: 400;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.header__notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #756F6E;
+    line-height: 1.2rem
+}
+
+.header__notify-footer {
+    display: flex;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+
+/* <!-- Header language --> */
+
+.icon-language {
+    margin-left: 3px;
+}
+
+.header__navbar-item:hover .header__language {
+    display: block;
+}
+
+.header__language {
+    background-color: var(--white-color);
+    display: flex;
+    position: absolute;
+    width: 140px;
+    height: 59px;
+    top: 87%;
+    left: -55px;
+    border-radius: 2px;
+    display: none;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    /* thông báo cho trình duyệt các animation đã thay đổi */
+    will-change: opacity, transform;
+}
+
+
+/* tạo mũi tên */
+
+.header__language::before {
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    /* transparent là màu trong suốt */
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+
+.header__language-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__language-item {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 5px 10px;
+    line-height: 20px;
+}
+
+.header__language-item:hover {
+    color: var(--primary-color);
+}
