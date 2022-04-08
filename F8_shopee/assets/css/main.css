@@ -148,6 +148,8 @@
         transform-origin: calc(100% - 20px) right;
         animation: headerNotifyGrowth ease-in 0.25s;
         display: none;
+        /* thông báo cho trình duyệt các animation đã thay đổi */
+        will-change: opacity, transform;
     }
     /* tạo mũi tên */
     
