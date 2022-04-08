@@ -149,6 +149,28 @@
         animation: headerNotifyGrowth ease-in 0.25s;
         display: none;
     }
+    /* tạo mũi tên */
+    
+    .header__notify::before {
+        content: "";
+        border-width: 20px 26px;
+        border-style: solid;
+        /* transparent là màu trong suốt */
+        border-color: transparent transparent var(--white-color) transparent;
+        right: 0;
+        top: -29px;
+        position: absolute;
+    }
+    
+    .header__notify::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -14px;
+        width: 90px;
+        height: 20px;
+    }
     
     @keyframes headerNotifyGrowth {
         from {
