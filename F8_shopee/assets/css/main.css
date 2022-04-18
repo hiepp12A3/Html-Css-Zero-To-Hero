@@ -338,6 +338,7 @@
 .auth-form {
     width: 500px;
     border-radius: 5px;
+    /* khi thằng con vượt quá thg cha thì hidden ẩn đi*/
     overflow: hidden;
     background-color: var(--white-color);
 }
@@ -350,6 +351,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 
 .auth-form__heading {
@@ -432,10 +435,35 @@
 }
 
 .auth-form-socials-titel {
-    margin: 0 32px;
+    margin: 0 28px;
 }
 
 .auth-form-socials--google {
     color: #666;
     background-color: var(--white-color);
+}
+
+
+/* Login form */
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate {
+    display: block;
+    height: 20px;
+    margin: 0 16px;
+    border-left: 1px solid #EAEAEA;
+}
+
+.auth-form__help-forget {
+    color: var(--primary-color);
 }

@@ -105,6 +105,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.6rem;
 }
 
 .btn.btn--normal:hover {
