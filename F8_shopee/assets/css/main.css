@@ -182,6 +182,7 @@
 
 .header__qr {
     position: absolute;
+    z-index: 1;
     left: 0;
     /* 100% của thẻ chứa nó là thẻ li */
     top: 87%;
@@ -388,6 +389,7 @@
 
 .header__language {
     background-color: var(--white-color);
+    z-index: 1;
     display: flex;
     position: absolute;
     width: 140px;
