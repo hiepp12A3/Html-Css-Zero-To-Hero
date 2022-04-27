@@ -38,7 +38,7 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -57,6 +57,7 @@
     background-color: var(--white-color);
     list-style: none;
     box-shadow: 0 1px 2px #ccc;
+    animation: fadeIn ease-in .2s;
     display: none;
 }
 
@@ -88,6 +89,10 @@
     /* background-color: black; */
 }
 
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-user-item a {
     text-decoration: none;
     color: var(--text-color);
@@ -116,13 +121,17 @@
     text-decoration: none;
 }
 
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 4px;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .header__navbar-item,
@@ -231,13 +240,15 @@
 
 .header__notify {
     position: absolute;
+    z-index: 1;
     top: 87%;
     right: 0;
     width: 404px;
+    border-radius: 2px;
     background-color: var(--white-color);
-    border: 1px solid #D3D3D3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     /* chọn được cái tâm hiển thị của transfrom */
-    transform-origin: calc(100% - 20px) right;
+    transform-origin: calc(100% - 32px) right;
     animation: headerNotifyGrowth ease-in 0.25s;
     display: none;
     /* thông báo cho trình duyệt các animation đã thay đổi */
@@ -284,6 +295,7 @@
     height: 40px;
     background-color: var(--white-color);
     cursor: default;
+    border-radius: 2px;
 }
 
 .header__notify-header h3 {
@@ -571,6 +583,11 @@
 
 .header__logo {
     width: 200px;
+}
+
+.header__logo-img {
+    color: transparent;
+    text-decoration: none;
 }
 
 .header__logo-img {
