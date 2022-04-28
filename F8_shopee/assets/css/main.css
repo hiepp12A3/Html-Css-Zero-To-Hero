@@ -972,3 +972,77 @@ sử dụng  :focus */
     color: var(--text-color);
     display: block;
 }
+
+
+/* APP CONTAINER */
+
+.app__container {
+    background-color: #F5F5F5;
+}
+
+.category {
+    border-radius: 2px;
+    background-color: var(--white-color);
+}
+
+.category__heading {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category__heading-icon {
+    font-size: 1.4rem;
+    margin-right: 4px;
+    position: relative;
+    top: -1px;
+}
+
+.category-list {
+    padding: 0 0 8px 0;
+    margin-left: 10px;
+}
+
+.category-item {
+    list-style: none;
+}
+
+.category-item--active .category-item__link {
+    color: var(--primary-color);
+}
+
+
+/* tạo mũi tên */
+
+.category-item--active .category-item__link::before {
+    content: "";
+    position: absolute;
+    /* 50% của chính nó là thẻ a nên chưa nằm giữa */
+    top: 50%;
+    left: 7px;
+    border: 6px solid;
+    /* translateY trục dọc 
+    50% của chính nó nên nó ở giữa*/
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent var(--primary-color);
+}
+
+.category-item__link {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 16px;
+    /* khai báo khi có c.động sẽ c.động ntn */
+    transition: right linear 0.1s;
+    /* ban đầu right =0 khi hover vào chạy đến -4px */
+    right: 0;
+}
+
+.category-item__link:hover {
+    /* right chạy đến -4 */
+    right: -4px;
+    color: var(--primary-color);
+}
