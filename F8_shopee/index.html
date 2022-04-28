@@ -314,15 +314,25 @@
                     <div class="gird__column-10">
                         <div class="home-filter">
                             <span class="home-filter__label">Sắp xếp theo</span>
-                            <button class="btn  ">Phổ biến</button>
-                            <button class="btn btn--primary">Mới nhất</button>
-                            <button class="btn">Bán chạy</button>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
 
                             <div class="select-input">
-                                <span class="select-input-lable">
+                                <span class="select-input__lable">
                                     Giá
-                                    <i class="fa-solid fa-angle-down"></i>
                                 </span>
+                                <i class="select-input__icon fa-solid fa-angle-down"></i>
+
+                                <!-- List Options -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="home-filter__page">
@@ -331,16 +341,14 @@
                                 </span>
 
                                 <div class="hone-filter__page-control">
-                                    <a href="" class="hone-filter__page-btn">
-                                        <i class="fa-solid fa-angle-left"></i>
+                                    <a href="" class="hone-filter__page-btn hone-filter__page-btn--disabled">
+                                        <i class="hone-filter__page-icon fa-solid fa-angle-left"></i>
                                     </a>
                                     <a href="" class="hone-filter__page-btn">
-                                        <i class="fa-solid fa-angle-right"></i>
+                                        <i class="hone-filter__page-icon fa-solid fa-angle-right"></i>
                                     </a>
                                 </div>
-
                             </div>
-
                         </div>
 
                     </div>
