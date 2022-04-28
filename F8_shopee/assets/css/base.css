@@ -34,7 +34,7 @@ html {
 
 /* chuẩn bị cho reponsive */
 
-.grid {
+.gird {
     /* với màn hình có kích thước > 1200px thì k.thước tối đa chỉ là 1200px */
     width: 1200px;
     /* k.thước nhỏ hơn 1200px, giảm k.thước  grid = k.thước màn hình*/
@@ -52,6 +52,23 @@ html {
     display: flex;
     /* tổng độ dài các thg con vượt quá gird__row bị nhảy xuống hàng */
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+
+/* Test */
+
+.gird__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.gird__column-8 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
 }
 
 
