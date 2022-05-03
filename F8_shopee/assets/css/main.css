@@ -1126,3 +1126,127 @@ sử dụng  :focus */
     margin: auto;
     color: #555;
 }
+
+
+/* Product item */
+
+.home-product-item {
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+.home-product-item__img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    /* hiển thị đầy đủ bức ảnh */
+    background-size: contain;
+    background-position: center;
+}
+
+.home-product-item__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 10px 10px 6px;
+    line-height: 1.8rem;
+    /* xét khi tên dài sẽ xuống dòng */
+    /* height: 3.6rem; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: block; */
+}
+
+.home-product-item__price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.home-product-item__price-old {
+    font-size: 1.4rem;
+    margin-left: 10px;
+    color: #666;
+    /* gạch giữa chữ */
+    text-decoration: line-through;
+}
+
+.home-product-item__price-new {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.home-product-item__action {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 10px 0;
+}
+
+.home-product-item__like {
+    font-size: 1.3rem;
+}
+
+
+/* thêm thẻ i */
+
+
+/* trg hợp bình thg thì ẩn đã tim đi */
+
+i.home-product-item__like-icon-fill {
+    color: #ff424f;
+    display: none;
+}
+
+
+/* trg hợp đã like */
+
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+    display: inline-block;
+}
+
+
+/* trg hợp chưa like */
+
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+    display: none;
+}
+
+.home-product-item__rating {
+    font-size: 1rem;
+    color: #d5d5d5;
+    margin: -1px 0 0 auto;
+}
+
+.home-product-item__start--gold {
+    color: var(--start-gold-color);
+}
+
+.home-product-item__sold {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-left: 6px;
+}
+
+.home-product-item__origin {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 10px 0;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.home-product-item__brand {}
+
+.home-product-item__orgin-name {}
+
+.home-product-item__favorite {}
+
+.home-product-item__sale-off {}
+
+.home-product-item__sale-off-percent {}
+
+.home-product-item__sale-off-lable {}
