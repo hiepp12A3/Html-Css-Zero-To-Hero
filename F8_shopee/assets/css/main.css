@@ -1133,6 +1133,7 @@ sử dụng  :focus */
 .home-product-item {
     background-color: var(--white-color);
     margin-top: 10px;
+    position: relative;
 }
 
 .home-product-item__img {
@@ -1243,7 +1244,46 @@ i.home-product-item__like-icon-fill {
 
 .home-product-item__orgin-name {}
 
-.home-product-item__favorite {}
+.home-product-item__favorite {
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    /* currentColor Hiển thị màu hiện tại của khối
+     này lấy màu từ color bên trên */
+    background-color: currentColor;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    padding-right: 4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.home-product-item__favorite span {
+    color: var(--white-color);
+}
+
+
+/* tạo mũi tên giả phần yêu thích */
+
+.home-product-item__favorite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    /* currentColor ăn theo màu của thẻ chứa nó */
+    border-top: 4px solid currentColor;
+    border-left: 4px solid transparent;
+    /* brightness giảm độ sáng đi 40% còn 60% */
+    filter: brightness(60%);
+}
+
+.home-product-item__favorite i {
+    font-size: 0.9rem;
+    margin: 0 2px 0 3px;
+    color: var(--white-color);
+}
 
 .home-product-item__sale-off {}
 
