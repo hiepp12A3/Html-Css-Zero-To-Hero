@@ -1285,8 +1285,41 @@ i.home-product-item__like-icon-fill {
     color: var(--white-color);
 }
 
-.home-product-item__sale-off {}
+.home-product-item__sale-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 32px;
+    text-align: center;
+    background-color: rgb(255, 216, 64, 0.9);
+}
 
-.home-product-item__sale-off-percent {}
 
-.home-product-item__sale-off-lable {}
+/* tạo 2 mũi tên nhỏ bên dưới */
+
+.home-product-item__sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-width: 0 20px 5px;
+    border-style: solid;
+    color: rgb(255, 216, 64, 0.9);
+    border-color: transparent currentColor transparent currentColor;
+}
+
+.home-product-item__sale-off-percent {
+    color: #ee4d2d;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    position: relative;
+    top: 3px;
+}
+
+.home-product-item__sale-off-lable {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+}
