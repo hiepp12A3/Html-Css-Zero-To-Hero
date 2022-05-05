@@ -1362,10 +1362,93 @@ i.home-product-item__like-icon-fill {
 /* pagination */
 
 .home-product__pagination {
-    margin: 48px 0 32px 0;
+    margin: 48px 0 50px 0;
 }
 
 
 /* Footer */
 
-.footer {}
+.footer {
+    background-color: #fbfbfb;
+    padding-top: 12px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer__section {
+    background-color: red;
+}
+
+.footer___heading {
+    color: #737373;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.footer__list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #737373;
+    display: block;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item-link:hover {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin: -1px 8px 0 0;
+    color: #4a4a4a;
+}
+
+.footer__dowload {
+    display: flex;
+}
+
+.footer__dowload-qr {
+    width: 86px;
+    height: 86px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__dowload-apps {
+    flex: 1;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__dowload-apps-link {
+    text-decoration: none;
+}
+
+.footer__dowload-app-img {
+    height: 20px;
+}
+
+.footer__dowload-app-icon {
+    height: 20px;
+}
+
+.footer__bottom {
+    background-color: #f5f5f5;
+    padding: 8px 0;
+    margin-top: 3px;
+}
+
+.footer_text {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #737373;
+}
